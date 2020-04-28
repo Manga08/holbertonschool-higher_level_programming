@@ -6,11 +6,12 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *checks = list, temp = list;
+	listint_t *checks = list, *temp = list;
 
-	while (checks != NULL && temp != NULL && cheks->next != NULL)
+	while (checks != NULL && temp != NULL && checks->next != NULL)
 	{
-		checks = checks->next->next, temp = temp->next;
+		checks = checks->next->next;
+		temp = temp->next;
 		if (checks == temp)
 			return (1);
 	}
