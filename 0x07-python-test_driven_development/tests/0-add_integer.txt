@@ -1,0 +1,82 @@
+===============================
+ Test for '0-add_integer.py'
+===============================
+
+First import ``add_integer`` from the ``0-add_integer`` module:
+
+import module:
+       >>> add_integer = _import_("0-add_integer").add_integer
+
+Add two integer:
+       >>> add_integer(7, 7)
+       14
+
+Add two floats:
+       >>> add_integer(7)
+       105
+
+       >>> add_integer(1, 2)
+       3
+
+Basic edge cases:
+-----------------------
+
+	>>> add_integer(x)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(33.3)
+	131
+
+	>>> add_integer(5.38, 9.23)
+	14
+
+	>>> add_integer(-98)
+	0
+
+	>>> add_integer(0,0)
+	0
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(None, None)
+	Traceback (most recent call last
+	TypeError: a must be an integer
+
+	>>> add_integer(8, None)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(None, 8)
+        Traceback (most recent call last):
+	TypeError: a must be an integer
+
+More edge cases:
+-----------------------
+
+	>>> add_integer(float('-inf'), float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(100e1000, 1)
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(4, "Holiii")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(2, float("inf"))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(float("Holberton"))
+	Traceback (most recent call last):
+	ValueError: could not convert string to float: 'Holberton'
+
