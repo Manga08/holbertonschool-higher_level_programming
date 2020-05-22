@@ -1,0 +1,69 @@
+===============================
+ Test for '3-say_my_name'
+===============================
+
+This is a text file in reStructured Text format. First import ``say_my_name`` from the ``3-say_my_name`` module:
+
+     >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Basic edge cases:
+-----------------------
+
+	>>> say_my_name("Manuel", "Acero")
+    	My name is Manuel Acero
+
+
+	>>> say_my_name("Manuel", "Acero", "Manga")
+     	Traceback (most recent call last):
+     	...
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+
+	>>> say_my_name()
+     	Traceback (most recent call last):
+     	...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+More edge cases:
+-----------------------
+
+	>>> say_my_name("Manga", 07)
+	Traceback (most recent call last):
+	...
+	TypeError: 'last_name' must be a string
+
+
+	>>> say_my_name(8, "Manga")
+	Traceback (most recent call last):
+	...
+	TypeError: 'first_name' must be a string
+
+
+	>>> say_my_name(1, 2)
+    	Traceback (most recent call last):
+    	...
+	TypeError: 'first_name' must be a string
+
+
+	>>> say_my_name(False, "Manga")
+    	Traceback (most recent call last):
+    	...
+	TypeError: 'first_name' must be a string
+
+
+	>>> say_my_name(None, None)
+      	Traceback (most recent call last):
+      	...
+	TypeError: 'first_name' must be a string
+
+
+	>>> say_my_name(None)
+    	Traceback (most recent call last):
+        ...
+	TypeError: 'first_name' must be a string
+
+
+	>>> say_my_name("Manga", (1, 2, 3))
+    	Traceback (most recent call last):
+        ...
+	TypeError: 'last_name' must be a string
