@@ -1,17 +1,16 @@
 ===============================
- Test for '0-add_integer.py'
+ Test for '0-add_integer'
 ===============================
 
 First import ``add_integer`` from the ``0-add_integer`` module:
 
-import module:
-       >>> add_integer = _import_("0-add_integer").add_integer
+      >>> add_integer = _import_('0-add_integer').add_integer
 
 Basic edge cases:
 -----------------------
 
-        >>> add_integer(7, 7)
-        14
+	>>> add_integer(1, 2)
+	3
 
 
         >>> add_integer(7)
