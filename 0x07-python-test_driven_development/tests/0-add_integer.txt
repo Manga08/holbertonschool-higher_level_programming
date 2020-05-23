@@ -117,3 +117,10 @@ More edge cases:
        	Traceback (most recent call last):
 	...
 	TypeError: b must be an integer
+
+
+	Test nan
+    	>>> add_integer(float('nan'))
+        Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
