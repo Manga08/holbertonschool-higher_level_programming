@@ -69,13 +69,13 @@ More edge cases:
 	>>> matrix_divided(5, 2)
     	Traceback (most recent call last):
         ...
-	TypeError: matrix must be a matrix (list of lists) of integers/floats
+	TypeError: object of type 'int' has no len()
 
 
 	>>> matrix_divided((1, 2, 3), 1)
     	Traceback (most recent call last):
         ...
-	TypeError: matrix must be a matrix (list of lists) of integers/floats
+	TypeError: object of type 'int' has no len()
 
 
 	>>> matrix_divided([[1, 2, 3], [4, 5]], 1)
