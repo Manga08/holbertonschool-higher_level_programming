@@ -34,8 +34,9 @@ More edge cases:
 	Spaces
 
 
-	>>> text_indentation("More spaces       ")
-	More spaces
+	>>> text_indentation("More spaces.       ")
+	More spaces.
+	<BLANKLINE>
 
 
 	>>> text_indentation(4)
