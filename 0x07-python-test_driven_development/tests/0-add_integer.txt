@@ -21,12 +21,6 @@ Basic edge cases:
 	100
 
 
-	>>> add_integer(x)
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
-
-
 	>>> add_integer(33.3)
 	131
 
@@ -51,12 +45,6 @@ Basic edge cases:
 
 	>>> add_integer(None)
 	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
-
-
-	>>> add_integer(None, None)
-	Traceback (most recent call last
 	...
 	TypeError: a must be an integer
 
