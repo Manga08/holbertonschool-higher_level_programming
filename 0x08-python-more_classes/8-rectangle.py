@@ -18,14 +18,14 @@ class Rectangle:
         string = ''
         if self.__width == 0 or self.__height == 0:
             return string
-        string += ((str(self.print_symbol) * self.__width + '\n')
-                   * self.__height)
+        string += ((str(self.print_symbol) * self.__width + '\n') *
+                   self.__height)
         return string[:-1]
 
     def __repr__(self):
         """String representation of the rectangle"""
-        return ('Rectangle(' + str(self.__width)
-                + ', ' + str(self.__height) + ')')
+        return ('Rectangle(' + str(self.__width) + ', ' +
+                str(self.__height) + ')')
 
     def __del__(self):
         """Delete the rectangle"""
