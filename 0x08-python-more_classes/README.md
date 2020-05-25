@@ -82,8 +82,8 @@ What you should learn from this project:
 * Write a class Rectangle that defines a rectangle by: (based on 8-rectangle.py)
 
 
-### [10. Class and instance attributes](./101-nqueens.py)
-* Write a blog post describing how object and class attributes work.
+### [10. N queens](./101-nqueens.py)
+* Write a program that solves the N queens problem by: (based on 101-nqueens.py)
 
 
 ---
