@@ -6,30 +6,44 @@ First import ``print_sorted`` from the ``1-my_list`` module:
 
     >>> MyList = __import__('1-my_list').MyList
 
-    >>> my_list = MyList()
-    >>> my_list.append(1)
-    >>> my_list.append(4)
-    >>> my_list.append(2)
-    >>> my_list.append(3)
-    >>> my_list.append(5)
 Basic edge cases:
 -----------------------
 
-	>>> print(my_list)
-	[1, 4, 2, 3, 5]
-	>>> my_list.print_sorted()
-	[1, 2, 3, 4, 5]
-	>>> print(my_list)
-	[1, 4, 2, 3, 5]
-	>>> my_list.append(-7)
-	>>> my_list.print_sorted()
-	[-7, 1, 2, 3, 4, 5]
-	>>> list2 = MyList()
-	>>> list2.print_sorted()
+	>>> my_list = MyList()
+        >>> my_list.print_sorted()
 	[]
-	>>> list2.append(-7)
-	>>> list2.print_sorted()
-	[-7]
+
+    	>>> a_list = MyList('a')
+        >>> a_list.print_sorted()
+	['a']
+
+    	>>> str_list = MyList('string')
+        >>> str_list.print_sorted()
+	['g', 'i', 'n', 'r', 's', 't']
+
+    	>>> my_list.append(1)
+        >>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(5)
+        >>> my_list.print_sorted()
+    	[1, 2, 3, 4, 5]
+
+        >>> print(my_list)
+        [1, 4, 2, 3, 5]
+
+    	>>> my_list.print_sorted() == my_list
+        [1, 2, 3, 4, 5]
+	False
+
+    	>>> zero_list = MyList()
+        >>> zero_list.append(0)
+    	>>> zero_list.append(0)
+        >>> zero_list.append(0)
+    	>>> zero_list.append(0)
+        >>> zero_list.append(0)
+    	>>> zero_list.print_sorted()
+        [0, 0, 0, 0, 0]
 
 More edge cases:
 -----------------------
@@ -50,15 +64,3 @@ More edge cases:
         Traceback (most recent call last):
         ...
         TypeError: 'float' object is not iterable
-
-
-        >>> my_list = MyList(None)
-        Traceback (most recent call last):
-        ...
-        TypeError: 'NoneType' object is not iterable
-
-
-	>>> my_list = MyList([1, 2], [2, 3])
-        Traceback (most recent call last):
-	...
-        TypeError: list() takes at most 1 argument (2 given)
