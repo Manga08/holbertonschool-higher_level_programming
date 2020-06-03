@@ -4,7 +4,7 @@
 
 First import ``print_sorted`` from the ``1-my_list`` module:
 
-      >>> MyList = __import__('1-my_list').MyList
+    >>> MyList = __import__('1-my_list').MyList
 
 Basic edge cases:
 -----------------------
