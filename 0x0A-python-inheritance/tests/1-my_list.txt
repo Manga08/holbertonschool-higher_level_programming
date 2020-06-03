@@ -14,16 +14,6 @@ Basic edge cases:
         []
 
 
-    	>>> a_list = MyList('a')
-        >>> a_list.print_sorted()
-	['a']
-
-
-    	>>> str_list = MyList('string')
-        >>> str_list.print_sorted()
-	['g', 'i', 'n', 'r', 's', 't']
-
-
     	>>> my_list.append(1)
         >>> my_list.append(4)
 	>>> my_list.append(2)
@@ -37,25 +27,11 @@ Basic edge cases:
         [1, 4, 2, 3, 5]
 
 
-    	>>> my_list.print_sorted() == my_list
-        [1, 2, 3, 4, 5]
-	False
-
 	>>> my_list = [4, 5, 6]
 	>>> my_list.print_sorted()
 	Traceback (most recent call last):
     	...
     	AttributeError: 'list' object has no attribute 'print_sorted'
-
-
-	>>> zero_list = MyList()
-    	>>> zero_list.append(0)
-        >>> zero_list.append(0)
-	>>> zero_list.append(0)
-	>>> zero_list.append(0)
-	>>> zero_list.append(0)
-	>>> zero_list.print_sorted()
-	[0, 0, 0, 0, 0]
 
 More edge cases:
 -----------------------
