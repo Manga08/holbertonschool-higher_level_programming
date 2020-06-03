@@ -43,6 +43,10 @@ class Square(Rectangle):
         self.__size = size
         super().__init__(size, size)
 
+    def __repr__(self):
+        """Return the width and height of the square."""
+        return '[Square] ' + str(self.__size) + '/' + str(self.__size)
+
     def area(self):
         """Return the area of the square."""
         return self.__size ** 2
