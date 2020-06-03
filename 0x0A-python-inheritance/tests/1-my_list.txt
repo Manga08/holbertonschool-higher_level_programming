@@ -1,6 +1,11 @@
-# importing module: 1-my_list
-=========================================================
->>> MyList = __import__('1-my_list').MyList
+===============================
+ Test for '1-my_list'
+===============================
+
+First import ``print_sorted`` from the ``1-my_list`` module:
+
+    >>> MyList = __import__('1-my_list').MyList
+
 >>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
