@@ -11,12 +11,12 @@ Basic edge cases:
 
 	>>> my_list = MyList()
     	>>> my_list.print_sorted()
-       	[]
+        []
 
 
-	>>> a_list = MyList('a')
-    	>>> a_list.print_sorted()
-        ['a']
+    	>>> a_list = MyList('a')
+        >>> a_list.print_sorted()
+	['a']
 
 
     	>>> str_list = MyList('string')
@@ -24,9 +24,9 @@ Basic edge cases:
 	['g', 'i', 'n', 'r', 's', 't']
 
 
-	>>> my_list.append(1)
-    	>>> my_list.append(4)
-        >>> my_list.append(2)
+    	>>> my_list.append(1)
+        >>> my_list.append(4)
+	>>> my_list.append(2)
 	>>> my_list.append(3)
 	>>> my_list.append(5)
 	>>> my_list.print_sorted()
@@ -36,6 +36,10 @@ Basic edge cases:
     	>>> print(my_list)
         [1, 4, 2, 3, 5]
 
+
+    	>>> my_list.print_sorted() == my_list
+        [1, 2, 3, 4, 5]
+	False
 
 	>>> my_list = [4, 5, 6]
 	>>> my_list.print_sorted()
