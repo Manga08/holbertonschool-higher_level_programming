@@ -79,3 +79,23 @@ class Rectangle(Base):
         """Print the rectangle."""
         print('\n' * self.__y + (' ' * self.__x + '#' * self.__width + '\n') *
               self.__height, end='')
+
+    def update(self, *args, **kwargs):
+        """Update the attributes of the class."""
+        attrs = ["id", "width", "height", "x", "y"]
+
+        for num_attr, num_arg in zip(attrs, args):
+            setattr(self, num_attr, num_arg)
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns a dictionary of the Rectangle parameters."""
+        dic = {}
+        dic["id"] = self.id
+        dic["width"] = self.width
+        dic["height"] = self.height
+        dic["x"] = self.x
+        dic["y"] = self.y
+        return dic
