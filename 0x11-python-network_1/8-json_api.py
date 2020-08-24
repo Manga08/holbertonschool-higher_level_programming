@@ -8,12 +8,14 @@ if __name__ == "__main__":
         q = ""
     else:
         q = argv[1]
+
     response = requests.post("http://0.0.0.0:5000/search_user", data={"q": q})
+
     try:
         data = response.json()
         if data:
             print("[{}] {}".format(data["id"], data["name"]))
         else:
-            print("No responseult")
+            print("No result")
     except:
         print("Not a valid JSON")
