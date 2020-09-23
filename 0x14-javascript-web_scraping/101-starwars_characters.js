@@ -1,7 +1,7 @@
 #!/usr/bin/node
-const request = require("request");
+const request = require('request');
 
-const URL = "https://swapi-api.hbtn.io/api/films/" + process.argv[2];
+const URL = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 
 const first = function () {
   request(URL, function (error, response, body) {
